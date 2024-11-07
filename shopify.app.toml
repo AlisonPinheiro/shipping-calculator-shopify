@@ -3,7 +3,7 @@
 client_id = "400c31348d1161d918066fa2a8a0e2b0"
 name = "shipping-calculator"
 handle = "shipping-calculator-27"
-application_url = "https://example.com/"
+application_url = "https://ribbon-breathing-foam-assess.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,7 +11,11 @@ embedded = true
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://ribbon-breathing-foam-assess.trycloudflare.com/auth/callback",
+  "https://ribbon-breathing-foam-assess.trycloudflare.com/auth/shopify/callback",
+  "https://ribbon-breathing-foam-assess.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-10"
@@ -22,3 +26,7 @@ api_version = "2024-10"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "appshipping-pinheiro.myshopify.com"
+automatically_update_urls_on_dev = true
